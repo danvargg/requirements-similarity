@@ -8,8 +8,6 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 from text_processing import TextProcessor
 
-# os.chdir('C:/Users/devg2/Downloads')
-
 data = pd.read_excel(open('jira.xlsx', 'rb'))
 data = data[['Issue key', 'Description', 'Issue Type', 'Custom field (Requirement ID)']]
 data['Issue_Type'] = data['Issue Type']
@@ -26,29 +24,29 @@ reqs = req['Description'].values
 stemmer = nltk.stem.porter.PorterStemmer()
 
 
-def StemTokens(tokens):
-    return [stemmer.stem(token) for token in tokens]
+# def StemTokens(tokens):
+#     return [stemmer.stem(token) for token in tokens]
 
 
 remove_punct_dict = dict((ord(punct), None) for punct in string.punctuation)
 
 
-def StemNormalize(text):
-    return StemTokens(nltk.word_tokenize(text.lower().translate(remove_punct_dict)))
+# def StemNormalize(text):
+#     return StemTokens(nltk.word_tokenize(text.lower().translate(remove_punct_dict)))
 
 
 lemmer = nltk.stem.WordNetLemmatizer()
 
 
-def LemTokens(tokens):
-    return [lemmer.lemmatize(token) for token in tokens]
+# def LemTokens(tokens):
+#     return [lemmer.lemmatize(token) for token in tokens]
 
 
 remove_punct_dict = dict((ord(punct), None) for punct in string.punctuation)
 
 
-def LemNormalize(text):
-    return LemTokens(nltk.word_tokenize(text.lower().translate(remove_punct_dict)))
+# def LemNormalize(text):
+#     return LemTokens(nltk.word_tokenize(text.lower().translate(remove_punct_dict)))
 
 
 ''' Matrix'''
@@ -56,9 +54,9 @@ def LemNormalize(text):
 TfidfVec = TfidfVectorizer(tokenizer=LemNormalize, stop_words='english')
 
 
-def cos_similarity(textlist):
-    tfidf = TfidfVec.fit_transform(textlist.astype('U'))
-    return (tfidf * tfidf.T).toarray()
+# def cos_similarity(textlist):
+#     tfidf = TfidfVec.fit_transform(textlist.astype('U'))
+#     return (tfidf * tfidf.T).toarray()
 
 
 # filter similarity > 0.5
