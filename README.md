@@ -1,4 +1,4 @@
-## Deep Learning System for Evaluation and Monitoring of Multiple Sclerosis (MS)
+## Sentence Similarity Model for Requirements Analysis
 
 ![Python](https://img.shields.io/badge/-Python-000000?style=flat&logo=Python)
 ![Scikit-Learn](https://img.shields.io/badge/-Scikit.Learn-000000?style=flat&logo=Scikit-Learn)
