@@ -8,6 +8,9 @@
 > This a generalized version of the project. The specific code, architecture, and data are property of the client and
 > cannot be fully shared.
 
+A `Text Similarity` model to support the requirements analysis phase for [CN](https://www.linkedin.com/company/cn/), in 
+the railways industry.
+
 ### Business Problem
 
 Over 118 L1 requirements were elicited from the stakeholders. The business wanted to ensure that the requirements were
